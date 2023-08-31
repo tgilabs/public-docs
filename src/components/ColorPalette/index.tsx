@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './styles.module.css';
+import styles from './styles.module.css';
 
 const colors: string[] = [
   '#551312',
@@ -28,6 +28,7 @@ const ColorBox: React.FC<ColorBoxProps> = ({ color }) => {
 
   return (
     <div className="color-box" style={{ backgroundColor: color }} onClick={handleCopy}>
+      <div className="color-circle" style={{ backgroundColor: color }}></div>
       <span className="color-text">{isCopied ? 'Copied!' : color}</span>
     </div>
   );
@@ -36,7 +37,6 @@ const ColorBox: React.FC<ColorBoxProps> = ({ color }) => {
 const ColorPalette: React.FC = () => {
   return (
     <div className="color-palette">
-      <h2>Our Color Palette</h2>
       <div className="color-grid">
         {colors.map((color, index) => (
           <ColorBox key={index} color={color} />
