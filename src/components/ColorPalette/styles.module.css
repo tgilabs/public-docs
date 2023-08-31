@@ -1,0 +1,30 @@
+.color-palette {
+    margin: 1rem;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .color-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .color-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .color-text {
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px black;
+  }
+  
