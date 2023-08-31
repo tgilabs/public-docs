@@ -27,17 +27,17 @@ const ColorBox: React.FC<ColorBoxProps> = ({ color }) => {
   };
 
   return (
-    <div className="color-box" style={{ backgroundColor: color }} onClick={handleCopy}>
-      <div className="color-circle" style={{ backgroundColor: color }}></div>
-      <span className="color-text">{isCopied ? 'Copied!' : color}</span>
+    <div className={styles['color-box']} style={{ backgroundColor: color }} onClick={handleCopy}>
+      <div className={styles['color-circle']} style={{ backgroundColor: color }}></div>
+      <span className={styles['color-text']}>{isCopied ? 'Copied!' : color}</span>
     </div>
   );
 };
 
 const ColorPalette: React.FC = () => {
   return (
-    <div className="color-palette">
-      <div className="color-grid">
+    <div className={styles['color-palette']}>
+      <div className={styles['color-grid']}>
         {colors.map((color, index) => (
           <ColorBox key={index} color={color} />
         ))}
