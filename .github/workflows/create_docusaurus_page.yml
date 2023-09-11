@@ -21,6 +21,12 @@ jobs:
           BRANCH_NAME="new-page-${ISSUE_NUMBER}"
           git checkout -b $BRANCH_NAME
 
+      - name: Set Git User and Email
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
+          
       - name: Create Docusaurus File
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
