@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Branch
         run: |
@@ -42,6 +44,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
           branch: "new-page-${{ github.event.issue.number }}"
           base: "Production"
