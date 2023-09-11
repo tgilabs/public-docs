@@ -21,14 +21,6 @@ jobs:
           BRANCH_NAME="new-page-${ISSUE_NUMBER}"
           git checkout -b $BRANCH_NAME
 
-      - name: Update Issue with Status
-        run: |
-          ISSUE_NUMBER=${{ github.event.issue.number }}
-          echo "Starting the page creation process for issue $ISSUE_NUMBER" > comment.txt
-          gh issue comment $ISSUE_NUMBER --body-file="comment.txt"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Create Docusaurus File
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
