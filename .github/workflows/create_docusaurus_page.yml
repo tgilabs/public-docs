@@ -1,0 +1,48 @@
+name: Create Docusaurus Page from Issue
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  create-docusaurus-page:
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'new-page'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Create Branch
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+          git checkout -b $BRANCH_NAME
+          git push origin $BRANCH_NAME
+
+      - name: Create Docusaurus File
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          ISSUE_BODY="${{ github.event.issue.body }}"
+          TITLE=$(echo "$ISSUE_BODY" | grep -oP '## Page Title\s*\K.*')
+          DESCRIPTION=$(echo "$ISSUE_BODY" | grep -oP '## Page Description\s*\K.*')
+          SIDEBAR_POSITION=$(echo "$ISSUE_BODY" | grep -oP '## Sidebar Position\s*\K.*')
+          CONTENT=$(echo "$ISSUE_BODY" | sed -n '/## Page Content/,//p' | tail -n +2)
+          FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
+          
+          echo "---" > $FILENAME
+          echo "title: $TITLE" >> $FILENAME
+          echo "description: $DESCRIPTION" >> $FILENAME
+          echo "sidebar_position: $SIDEBAR_POSITION" >> $FILENAME
+          echo "---" >> $FILENAME
+          echo "$CONTENT" >> $FILENAME
+
+          git add $FILENAME
+          git commit -m "Create new Docusaurus page from issue $ISSUE_NUMBER"
+          git push origin $BRANCH_NAME
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
+          branch: "new-page-${{ github.event.issue.number }}"
+          base: "main"
