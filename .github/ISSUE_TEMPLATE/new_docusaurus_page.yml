@@ -1,0 +1,33 @@
+name: "New Docusaurus Page"
+description: "Create a new Docusaurus page."
+labels: ["new-page"]
+
+body:
+- type: input
+  id: title
+  attributes:
+    label: Page Title
+    placeholder: Enter the title of the page
+  validations:
+    required: true
+- type: textarea
+  id: description
+  attributes:
+    label: Page Description
+    placeholder: Enter the description for the page
+  validations:
+    required: true
+- type: input
+  id: sidebar_position
+  attributes:
+    label: Sidebar Position
+    placeholder: Enter the sidebar position for the page
+  validations:
+    required: true
+- type: textarea
+  id: content
+  attributes:
+    label: Page Content
+    placeholder: Enter the content of the page
+  validations:
+    required: true
