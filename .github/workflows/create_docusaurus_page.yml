@@ -22,11 +22,10 @@ jobs:
       - name: Create Docusaurus File
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          ISSUE_BODY="${{ github.event.issue.body }}"
-          TITLE=$(echo "$ISSUE_BODY" | grep -oP '## Page Title\s*\K.*')
-          DESCRIPTION=$(echo "$ISSUE_BODY" | grep -oP '## Page Description\s*\K.*')
-          SIDEBAR_POSITION=$(echo "$ISSUE_BODY" | grep -oP '## Sidebar Position\s*\K.*')
-          CONTENT=$(echo "$ISSUE_BODY" | sed -n '/## Page Content/,//p' | tail -n +2)
+          TITLE=${{ github.event.issue.body.title }}
+          DESCRIPTION=${{ github.event.issue.body.description }}
+          SIDEBAR_POSITION=${{ github.event.issue.body.sidebar_position }}
+          CONTENT=${{ github.event.issue.body.content }}
           FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
           
           echo "---" > $FILENAME
@@ -45,4 +44,4 @@ jobs:
         with:
           title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
           branch: "new-page-${{ github.event.issue.number }}"
-          base: "main"
+          base: "Production"
