@@ -5,7 +5,7 @@ on:
     types: [labeled]
 
 jobs:
-  create-docusaurus-page:
+  create-branch:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'new-page'
     steps:
@@ -19,14 +19,32 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-      
-      - name: Create Branch
+
+      - name: Create and Push Branch
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           BRANCH_NAME="new-page-${ISSUE_NUMBER}"
           git checkout -b $BRANCH_NAME
+          git commit --allow-empty -m "Initial empty commit"
+          git push -u origin $BRANCH_NAME
 
-          
+  commit-file:
+    needs: create-branch
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'new-page'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: Production
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout New Branch
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+          git checkout $BRANCH_NAME
+
       - name: Create Docusaurus File
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
@@ -43,10 +61,6 @@ jobs:
           echo "---" >> $FILENAME
           echo "$CONTENT" >> $FILENAME
 
-          git add $FILENAME
-          git commit -m "Create new Docusaurus page from issue $ISSUE_NUMBER"
-          git push origin $BRANCH_NAME
-        
       - name: Add, Commit and Push Changes
         run: |
           git add .
