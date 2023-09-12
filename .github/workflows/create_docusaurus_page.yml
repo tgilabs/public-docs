@@ -43,6 +43,7 @@ jobs:
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+          git fetch origin $BRANCH_NAME:$BRANCH_NAME
           git checkout $BRANCH_NAME
 
       - name: Create Docusaurus File
