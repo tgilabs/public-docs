@@ -26,18 +26,25 @@ jobs:
           BRANCH_NAME="new-page-${ISSUE_NUMBER}"
           git checkout -b $BRANCH_NAME
           git commit --allow-empty -m "Initial empty commit"
-          git push -u origin $BRANCH_NAME
+          git push origin $BRANCH_NAME
 
   commit-file:
     needs: create-branch
     runs-on: ubuntu-latest
     if: github.event.label.name == 'new-page'
     steps:
-      - name: Checkout New Branch
+      - name: Checkout code
         uses: actions/checkout@v3
         with:
-          ref: 'new-page-${{ github.event.issue.number }}'
+          ref: Production
           token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Fetch and Checkout New Branch
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+          git fetch origin $BRANCH_NAME
+          git checkout $BRANCH_NAME
 
       - name: Set Git User and Email
         run: |
@@ -50,7 +57,6 @@ jobs:
           TITLE="${{ github.event.issue.title }}"
           BODY="${{ github.event.issue.body }}"
           FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
-
           echo "---" > $FILENAME
           echo "title: $TITLE" >> $FILENAME
           echo "description: Created from Issue $ISSUE_NUMBER" >> $FILENAME
@@ -62,7 +68,7 @@ jobs:
         run: |
           git add .
           git commit -m "Create new Docusaurus page from issue ${{ github.event.issue.number }}"
-          git push origin 'new-page-${{ github.event.issue.number }}'
+          git push origin HEAD
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
