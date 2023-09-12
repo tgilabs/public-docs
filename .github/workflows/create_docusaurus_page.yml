@@ -53,19 +53,19 @@ jobs:
           git commit -m "Create new Docusaurus page from issue $ISSUE_NUMBER"
           git push  # Now this should work without issue
 
-      - name: Build Docusaurus Website
-        run: |
-          cd website  # Navigate to your Docusaurus website directory
-          npm install
-          npm run build
+#       - name: Build Docusaurus Website
+#         run: |
+#           cd website  # Navigate to your Docusaurus website directory
+#           npm install
+#           npm run build
 
-      - name: Post Message to Original Issue
-        run: |
-          ISSUE_NUMBER=${{ github.event.issue.number }}
-          echo "The page creation process has completed. A new branch named 'new-page-${ISSUE_NUMBER}' has been created. All tests have passed successfully." > comment.txt
-          gh issue comment $ISSUE_NUMBER --body-file="comment.txt"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Post Message to Original Issue
+#         run: |
+#           ISSUE_NUMBER=${{ github.event.issue.number }}
+#           echo "The page creation process has completed. A new branch named 'new-page-${ISSUE_NUMBER}' has been created. All tests have passed successfully." > comment.txt
+#           gh issue comment $ISSUE_NUMBER --body-file="comment.txt"
+#         env:
+#           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
