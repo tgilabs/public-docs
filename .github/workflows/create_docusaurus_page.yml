@@ -47,18 +47,16 @@ jobs:
       - name: Create Docusaurus File
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          TITLE=${{ github.event.issue.body.title }}
-          DESCRIPTION=${{ github.event.issue.body.description }}
-          SIDEBAR_POSITION=${{ github.event.issue.body.sidebar_position }}
-          CONTENT=${{ github.event.issue.body.content }}
+          TITLE=${{ github.event.issue.title }}
+          BODY=${{ github.event.issue.body }}
           FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
           
           echo "---" > $FILENAME
           echo "title: $TITLE" >> $FILENAME
-          echo "description: $DESCRIPTION" >> $FILENAME
-          echo "sidebar_position: $SIDEBAR_POSITION" >> $FILENAME
+          echo "description: Created from Issue $ISSUE_NUMBER" >> $FILENAME
+          echo "sidebar_position: 1" >> $FILENAME
           echo "---" >> $FILENAME
-          echo "$CONTENT" >> $FILENAME
+          echo "$BODY" >> $FILENAME
 
       - name: Add, Commit and Push Changes
         run: |
