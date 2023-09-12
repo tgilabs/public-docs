@@ -9,19 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'new-page'
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
           ref: Production
           token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Set Git User and Email
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-      - name: Create and Push Branch
-        run: |
+      - run: git config --local user.email "action@github.com"
+      - run: git config --local user.name "GitHub Action"
+      - run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           BRANCH_NAME="new-page-${ISSUE_NUMBER}"
           git checkout -b $BRANCH_NAME
@@ -33,26 +27,11 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'new-page'
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
         with:
-          ref: Production
+          ref: 'new-page-${{ github.event.issue.number }}'
           token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Fetch and Checkout New Branch
-        run: |
-          ISSUE_NUMBER=${{ github.event.issue.number }}
-          BRANCH_NAME="new-page-${ISSUE_NUMBER}"
-          git fetch origin $BRANCH_NAME
-          git checkout $BRANCH_NAME
-
-      - name: Set Git User and Email
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-
-      - name: Create Docusaurus File
-        run: |
+      - run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
           TITLE="${{ github.event.issue.title }}"
           BODY="${{ github.event.issue.body }}"
@@ -63,15 +42,13 @@ jobs:
           echo "sidebar_position: 1" >> $FILENAME
           echo "---" >> $FILENAME
           echo "$BODY" >> $FILENAME
-
-      - name: Add, Commit and Push Changes
-        run: |
-          git add .
-          git commit -m "Create new Docusaurus page from issue ${{ github.event.issue.number }}"
-          git push origin HEAD
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v5
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Create new Docusaurus page from issue ${{ github.event.issue.number }}"
+          branch: 'new-page-${{ github.event.issue.number }}'
+      - run: git log --oneline -n 5
+      - run: git status
+      - uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
