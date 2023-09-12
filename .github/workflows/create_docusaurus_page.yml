@@ -2,7 +2,7 @@ name: Create Docusaurus Page from Issue
 
 on:
   issues:
-    types: [opened, labeled]
+    types: [labeled]
 
 jobs:
   create-docusaurus-page:
@@ -46,6 +46,12 @@ jobs:
           git add $FILENAME
           git commit -m "Create new Docusaurus page from issue $ISSUE_NUMBER"
           git push origin $BRANCH_NAME
+        
+      - name: Add, Commit and Push Changes
+        run: |
+          git add .
+          git commit -m "Create new Docusaurus page from issue $ISSUE_NUMBER"
+          git push
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
