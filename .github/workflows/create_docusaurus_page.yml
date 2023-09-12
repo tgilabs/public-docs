@@ -61,8 +61,20 @@ jobs:
         branch: new-page-${{ github.event.issue.number }}
     
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v5
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
-        base: 'Production'
+      run: |
+        ISSUE_NUMBER=${{ github.event.issue.number }}
+        BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+        
+        # Create PR using GitHub API
+        curl \
+          -X POST \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/pulls \
+          -d '{
+            "title": "New Docusaurus Page from Issue '${ISSUE_NUMBER}'",
+            "body": "This is an auto-generated PR for new Docusaurus page creation.",
+            "head": "'${BRANCH_NAME}'",
+            "base": "Production"
+          }'
+
