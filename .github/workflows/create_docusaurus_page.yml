@@ -39,6 +39,11 @@ jobs:
           ref: Production
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set Git User and Email
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
       - name: Checkout New Branch
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
@@ -64,9 +69,11 @@ jobs:
 
       - name: Add, Commit and Push Changes
         run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          BRANCH_NAME="new-page-${ISSUE_NUMBER}"
           git add .
           git commit -m "Create new Docusaurus page from issue $ISSUE_NUMBER"
-          git push
+          git push -u origin $BRANCH_NAME
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
