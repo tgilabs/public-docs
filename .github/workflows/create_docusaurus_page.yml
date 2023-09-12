@@ -52,5 +52,5 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
-          branch: 'new-page-${{ github.event.issue.number }}'
-          base: "Production"
+          head: 'new-page-${{ github.event.issue.number }}'
+          base: 'Production'
