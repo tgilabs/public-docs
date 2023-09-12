@@ -35,14 +35,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
       with:
-        ref: new-page-${{ github.event.issue.number }}
+        ref: Production
         token: ${{ secrets.GITHUB_TOKEN }}
+        
+    # Here, you may consider adding a step to sanitize or parse the issue body and title.
 
     - name: Create Docusaurus File
       run: |
         ISSUE_NUMBER=${{ github.event.issue.number }}
-        TITLE=${{ github.event.issue.title }}
-        BODY=${{ github.event.issue.body }}
+        TITLE="${{ github.event.issue.title }}"  # Enclosed in quotes to handle special characters
+        BODY="${{ github.event.issue.body }}"  # Enclosed in quotes to handle special characters
         FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
         
         echo "---" > $FILENAME
@@ -51,7 +53,6 @@ jobs:
         echo "sidebar_position: 1" >> $FILENAME
         echo "---" >> $FILENAME
         echo "$BODY" >> $FILENAME
-        cat $FILENAME
     
     - name: Commit and Push Changes
       uses: stefanzweifel/git-auto-commit-action@v4
