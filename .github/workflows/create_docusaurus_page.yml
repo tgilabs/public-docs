@@ -9,48 +9,58 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.label.name == 'new-page'
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: Production
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - run: git config --local user.email "action@github.com"
-      - run: git config --local user.name "GitHub Action"
-      - run: |
-          ISSUE_NUMBER=${{ github.event.issue.number }}
-          BRANCH_NAME="new-page-${ISSUE_NUMBER}"
-          git checkout -b $BRANCH_NAME
-          git commit --allow-empty -m "Initial empty commit"
-          git push origin $BRANCH_NAME
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: Production
+        token: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Set Git User and Email
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+      
+    - name: Create and Push Branch
+      run: |
+        ISSUE_NUMBER=${{ github.event.issue.number }}
+        BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+        git checkout -b $BRANCH_NAME
+        git push -u origin $BRANCH_NAME
 
   commit-file:
     needs: create-branch
     runs-on: ubuntu-latest
     if: github.event.label.name == 'new-page'
     steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: 'new-page-${{ github.event.issue.number }}'
-          token: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
-          ISSUE_NUMBER=${{ github.event.issue.number }}
-          TITLE="${{ github.event.issue.title }}"
-          BODY="${{ github.event.issue.body }}"
-          FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
-          echo "---" > $FILENAME
-          echo "title: $TITLE" >> $FILENAME
-          echo "description: Created from Issue $ISSUE_NUMBER" >> $FILENAME
-          echo "sidebar_position: 1" >> $FILENAME
-          echo "---" >> $FILENAME
-          echo "$BODY" >> $FILENAME
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "Create new Docusaurus page from issue ${{ github.event.issue.number }}"
-          branch: 'new-page-${{ github.event.issue.number }}'
-      - run: git log --oneline -n 5
-      - run: git status
-      - uses: peter-evans/create-pull-request@v5
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
-          head: 'new-page-${{ github.event.issue.number }}'
-          base: 'Production'
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: Production
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Create Docusaurus File
+      run: |
+        ISSUE_NUMBER=${{ github.event.issue.number }}
+        TITLE=${{ github.event.issue.title }}
+        BODY=${{ github.event.issue.body }}
+        FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
+        
+        echo "---" > $FILENAME
+        echo "title: $TITLE" >> $FILENAME
+        echo "description: Created from Issue $ISSUE_NUMBER" >> $FILENAME
+        echo "sidebar_position: 1" >> $FILENAME
+        echo "---" >> $FILENAME
+        echo "$BODY" >> $FILENAME
+    
+    - name: Commit and Push Changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Create new Docusaurus page from issue ${{ github.event.issue.number }}
+        branch: new-page-${{ github.event.issue.number }}
+    
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        title: "New Docusaurus Page from Issue ${{ github.event.issue.number }}"
+        base: 'Production'
