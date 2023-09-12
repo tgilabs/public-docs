@@ -39,6 +39,11 @@ jobs:
           ref: Production
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Set Git User and Email
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+
       - name: Checkout New Branch
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
