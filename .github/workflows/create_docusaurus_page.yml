@@ -47,10 +47,10 @@ jobs:
       - name: Create Docusaurus File
         run: |
           ISSUE_NUMBER=${{ github.event.issue.number }}
-          TITLE=${{ github.event.issue.title }}
-          BODY=${{ github.event.issue.body }}
+          TITLE="${{ github.event.issue.title }}"
+          BODY="${{ github.event.issue.body }}"
           FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
-          
+
           echo "---" > $FILENAME
           echo "title: $TITLE" >> $FILENAME
           echo "description: Created from Issue $ISSUE_NUMBER" >> $FILENAME
