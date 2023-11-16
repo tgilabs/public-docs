@@ -21,3 +21,5 @@ yarn-error.log*
 
 # Remove Yarn 
 .yarn
+yarn.lock
+
