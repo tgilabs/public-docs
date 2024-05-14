@@ -66,22 +66,26 @@ const config: Config = {
       },
       items: [
         {
-          to: '/community',
+          type: 'docSidebar',
+          sidebarId: 'community',
           label: 'קהילה',
           position: 'left',
         },
         {
-          to: '/events',
+          type: 'docSidebar',
+          sidebarId: 'events',
           label: 'אירועים',
           position: 'left',
         },
         {
-          to: '/projects',
+          type: 'docSidebar',
+          sidebarId: 'projects',
           label: 'פרויקטים',
           position: 'left',
         },
         {
-          to: '/history',
+          type: 'docSidebar',
+          sidebarId: 'history',
           label: 'היסטוריה',
           position: 'left',
         },
