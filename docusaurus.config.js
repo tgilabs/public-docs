@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'הוויקי של טגי',
+  title: 'הויקפדיה של TeGriAi',
   tagline: 'ברוכים הבאים למידעון של TeGriAi',
   favicon: 'img/favicon.ico',
 
