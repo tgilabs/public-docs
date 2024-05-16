@@ -80,8 +80,8 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'projects',
-          label: 'פרויקטים',
+          sidebarId: 'lab',
+          label: 'המעבדה 🧪',
           position: 'left',
         },
         {
