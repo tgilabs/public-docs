@@ -1,36 +1,41 @@
-# TeGriAi Wiki
+# Website
 
-Welcome to the TeGriAi Wiki, your comprehensive resource powered by [Docusaurus 2](https://docusaurus.io/) and hosted with the efficiency of [Cloudflare](https://pages.cloudflare.com/).
-
-## Getting Started
-
-- Read the [Contributing Guidelines](./CONTRIBUTING.md) to learn how to contribute to the wiki.
-- Read the [Code of Conduct](./CODE_OF_CONDUCT.md) to learn about our community standards.
-- Read the [License](./LICENSE) to learn about the terms of use for this wiki.
-
-
-To explore our content and make the most of your experience, follow these steps:
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
 
-```bash
+```
 $ yarn
 ```
 
-This command installs the necessary dependencies to ensure smooth functionality.
-
 ### Local Development
 
-```bash
+```
 $ yarn start
 ```
 
-Launch a local development server and access the content in your browser. Changes you make are immediately visible without requiring server restarts.
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-### Building for Deployment
+### Build
 
-```bash
+```
 $ yarn build
 ```
 
-Generate static content within the `build` directory, ready to be deployed through a variety of static content hosting services.
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+Using SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```
+$ GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
