@@ -1,8 +1,4 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
-import { PiArrowLeftThin } from "react-icons/pi";
+
 import '@site/src/css/custom.css'
 import '@site/src/css/HomePage.css'
 

@@ -1,5 +1,4 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
+
 import '@site/src/css/custom.css'
 import '@site/src/css/HomePage.css'
 

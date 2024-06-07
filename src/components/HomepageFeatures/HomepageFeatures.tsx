@@ -1,7 +1,4 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
 import styles from './styles.module.css';
-import Link from '@docusaurus/Link';
 import { PiArrowLeftThin } from "react-icons/pi";
 
 
@@ -38,9 +35,7 @@ function Values({ categoryTitle, categoryLink, title, link }) {
         <a href={link} className='Link-Container'>
           <a style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
             <div >
-              <a href={categoryLink}>
-                <a style={{ color: 'blue', }}>{categoryTitle}</a>
-              </a> / {title}
+                <a  href={categoryLink}style={{ color: 'blue', }}>{categoryTitle}</a> / {title}
               <PiArrowLeftThin className='Icons'/>
             </div>
           </a>

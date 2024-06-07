@@ -3,7 +3,7 @@
 
 
 .start-button {
-    background-color: #1ac6ff; /* blue color */
+    background-color: var(--ifm-color-primary-light); /* blue color */
     color: white;
     padding: 15px 50px; /* adjust padding as needed */
     border: none;
@@ -15,36 +15,29 @@
 }
   
 .start-button:hover {
-  background-color: #0069d9; /* slightly darker blue on hover */
-}
-.Header-Container{
-  width: 50%; 
-  margin: auto;
-  display: grid;
-  place-items: center;
+  background-color: var( --ifm-color-primary-blue); /* slightly darker blue on hover */
 }
 .Header-Container {
-  background-color: white; /* white background */
+    width: 50%; 
+    display: grid;
+    place-items: center;
+  background-color: var( --ifm-color-container-background);; /* white background */
   padding: 20px; /* padding around the content */
   margin: 0 auto; /* center the container horizontally */
   max-width: 1000px; /* set a maximum width */
 }
 .text1 {
   text-align: center; /* center the text within the container */
- /* direction: rtl;*/
+
 }
 .text2 {
   text-align: center; /* center the text within the container */
-   /* direction: rtl;*/
+  
 }
-.Values-Container{
-  margin: auto;
-}
-
 .Value-Container {
-   /* direction: rtl;*/
-  background-color: #f8f9fa; /* light gray background */
-  border: 1px solid #e9ecef; /* light border */
+  
+  background-color: var( --ifm-color-container-background); /* light gray background */
+  border: 1px solid var(--ifm-color-container-border); /* light border */
   border-radius: 10px; /* rounded corners */
   width: 100%;
   padding: 10px 15px; /* padding around the content */
@@ -69,8 +62,8 @@
   color: #007bff; /* blue hover color for title */
 }
 .Last-Values-Container {
-  background-color: #f8f9fa; /* Light gray background */
-  border: 1px solid #e9ecef; /* Light border */
+  background-color: var( --ifm-color-container-background); /* Light gray background */
+  border: 1px solid var(--ifm-color-container-border); /* Light border */
   border-radius: 20px; /* Rounded corners */
   padding: 20px; /* Padding for content */
   margin: 10px auto; /* Center the container horizontally */
@@ -90,7 +83,7 @@
   
 /* Styles for the Values-Container element */
 .Values-Container {
-  
+    margin: auto;
   display: flex; /* Use flexbox for layout */
   flex-wrap: wrap; /* Allow items to wrap if needed */
   justify-content: space-between; /* Space items evenly */
@@ -104,9 +97,7 @@
   
   margin-right: 10px; /* optional margin for spacing */
 }
-.Recomended-Container{
-   /* direction: rtl;*/
-}
+
 .Recomended-Container-Title{
   color: #007bff;
 }
@@ -128,7 +119,7 @@
   grid-template-rows: auto 1fr; /* Two rows: auto for title, 1fr for main text */
   gap: 5px; /* Add spacing between elements */
   margin: 20px; /* Add margin around the container */
-  background-color: #F0F0F0; /* Set background color */
+  background-color: var(--ifm-color-container-background); /* Set background color */
   width: 300px; /* Set container width */
   padding: 15px; /* Add padding inside the container */
   border-radius: 10px; /* Add border radius for rounded corners */
