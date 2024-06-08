@@ -1,0 +1,10 @@
+position: 5 # float position is supported
+label: '📚 מדיניות מידע' 
+collapsible: true
+collapsed: true
+className: red
+link:
+  type: generated-index
+  title: כל המידע על השרתים שלנו
+customProps:
+  description: איך להשתמש במותג שלנו
