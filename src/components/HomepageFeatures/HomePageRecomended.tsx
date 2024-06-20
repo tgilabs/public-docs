@@ -52,7 +52,7 @@ export default function HomePageRecomended(): JSX.Element {
         <div className='Recomended-Container'>
             <div className='Recomended-Container-Title-Container'>
                 <h3 className='Recomended-Container-Title'> מומלצים</h3>
-                <h6 style={{padding:'10px'}}>הערכים הכי מומלצים TGI WIKI </h6>
+                <h6 style={{padding:'10px'}}>ערכים מומלצים לקריאה</h6>
             </div>
             <div className='Recomended-Container-Recomendeds'>
               {recomendedlist.map((props, idx) => (
