@@ -3,15 +3,15 @@
 
 
 .start-button {
-    background-color: var(--ifm-color-primary-light); /* blue color */
+    background-color: var(--ifm-color-primary-light);
     color: white;
-    padding: 15px 50px; /* adjust padding as needed */
+    padding: 15px 50px;
     border: none;
     font-size: 20px;
     cursor: pointer;
     margin: auto;
     border-radius: 5px;
-    text-align: center; /* center the text within the container */
+    text-align: center;
 }
   
 .start-button:hover {

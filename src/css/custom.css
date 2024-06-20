@@ -62,8 +62,8 @@ h6 {
   --ifm-color-primary-light: #29d5b0;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --ifm-color-primary-blue: #33a1ff; /* Dark theme version of primary blue */
-  --ifm-color-container-background: #2d2d2d; /* Dark theme container background */
-  --ifm-color-container-border: #4a4a4a; /* Dark theme container border */
+  --ifm-color-primary-blue: #33a1ff;
+  --ifm-color-container-background: #2d2d2d;
+  --ifm-color-container-border: #4a4a4a;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
