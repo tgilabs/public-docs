@@ -84,6 +84,12 @@ const config: Config = {
           position: 'left',
         },
         {
+          type: 'docSidebar',
+          sidebarId: 'legal',
+          label: 'מדיניות',
+          position: 'left',
+        },
+        {
           href: 'https://discord.gg/tgi',
           label: 'דיסקורד',
           position: 'right',
