@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'הויקיפדיה של TeGriAi',
   tagline: 'ברוכים הבאים לעולם שלנו! הקהילה הישראלית הכי גדולה ברשת',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.png',
 
   // Set the production url of your site here
   url: 'https://wiki.tegriai.com',
@@ -51,12 +51,12 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/background.jpeg',
     navbar: {
       title: 'הויקיפדיה של TeGriAi',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'TeGriAi Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
@@ -88,6 +88,11 @@ const config: Config = {
           sidebarId: 'legal',
           label: 'מדיניות',
           position: 'left',
+        },
+        {
+          href: 'https://cloud.ims-network.net/he',
+          label: 'הענן שלנו',
+          position: 'right',
         },
         {
           href: 'https://discord.gg/tgi',
