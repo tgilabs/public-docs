@@ -53,6 +53,7 @@ h6 {
   --background: #E3E3E3;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --maintext: #000000;
 }
 
 [data-theme='dark'] {
@@ -68,4 +69,6 @@ h6 {
   --background: #1C1E21; 
   --ifm-color-container-border: #4a4a4a;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --maintext: #ffffff;
+
 }

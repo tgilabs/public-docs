@@ -35,7 +35,7 @@ function Values({ categoryTitle, categoryLink, title, link }) {
         <a href={link} className='Link-Container'>
           <a style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}>
             <div >
-                <a  href={categoryLink}style={{ color: 'blue', }}>{categoryTitle}</a> / {title}
+                <a  href={categoryLink}style={{ color: '#006BDD', }}>{categoryTitle}</a> / {title}
               <PiArrowLeftThin className='Icons'/>
             </div>
           </a>
@@ -55,7 +55,7 @@ export default function HomepageLastValues(): JSX.Element {
           ))}
           
         </div>
-        <a style={{float:'left'}} href=''>קרא/י עוד  <PiArrowLeftThin style={{float:'left',margin:'5px',color:'#007bff'}}/></a>
+        <a style={{float:'left'}} href=''>קרא/י עוד  <PiArrowLeftThin style={{float:'left',margin:'5px',color:'#05468B'}}/></a>
       </div>
     </section>
   );
