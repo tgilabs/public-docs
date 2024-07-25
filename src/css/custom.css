@@ -40,12 +40,12 @@ h6 {
 
 
 :root {
-  --ifm-color-primary: #2e8555;
+  --ifm-color-primary: #1782f4;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
   --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lighter: #007bff;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-color-primary-blue: #0069d9;
   --ifm-color-container-background: #f8f9fa;
@@ -56,14 +56,14 @@ h6 {
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary: #3697ff;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-light: #3697ff;
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
-  --ifm-color-primary-blue: #33a1ff;
+  --ifm-color-primary-blue: #0069d9;
   --ifm-color-container-background: #2d2d2d;
   --background: #1C1E21; 
   --ifm-color-container-border: #4a4a4a;
