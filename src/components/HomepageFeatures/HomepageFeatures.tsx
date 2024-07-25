@@ -55,7 +55,7 @@ export default function HomepageLastValues(): JSX.Element {
           ))}
           
         </div>
-        <a style={{float:'left'}} href=''>קרא/י עוד  <PiArrowLeftThin style={{float:'left',margin:'5px',color:'#05468B'}}/></a>
+        <a style={{float:'left'}} href=''>קרא/י עוד  <PiArrowLeftThin style={{float:'left',margin:'5px',color:'#007bff'}}/></a>
       </div>
     </section>
   );
