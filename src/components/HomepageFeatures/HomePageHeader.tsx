@@ -4,6 +4,7 @@ import '@site/src/css/HomePage.css'
 
 export default function HomePageHeader(): JSX.Element {
     return (
+
     <div className='Header-Container'>
     <div className='text-wrapper'>
     <h2 className='text1'>הויקיפדיה של TeGriAi</h2>

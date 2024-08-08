@@ -32,6 +32,7 @@
 }
 
 .start-button {
+
   background-color: var(--ifm-color-primary);
   color: white;
   padding: 20px 100px;
@@ -49,9 +50,9 @@
 }
 
 .start-button:hover {
+
   background-color: var(--ifm-color-primary-blue);
 }
-
 .text1 {
   color: #fdfdfd;
   font-weight: bold;
@@ -59,11 +60,11 @@
 }
 
 .text2 {
+
   font-style: italic;
   color: #025ec0;
   font-size: 1.7em;
   font-weight: bold;
-
 }
 
 .Value-Container {
