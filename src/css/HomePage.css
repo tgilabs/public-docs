@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+
+
+.Header-Container {
+  width: 100%;
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('/static/img/TeGriA-froum-back-big.jpeg');
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 10px 30px 0px var(--shadow-box-headerimage); 
+
+}
+
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1; 
+  padding-bottom: 15vh;
+}
+
+.start-button {
+
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 20px 100px;
+  font-weight: bold;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 2vh;
+}
+
+.start-button:hover {
+
+  background-color: var(--ifm-color-primary-blue);
+}
+.text1 {
+  color: #fdfdfd;
+  font-weight: bold;
+  font-size: 5em;
+}
+
+.text2 {
+
+  font-style: italic;
+  color: #025ec0;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+
+.Value-Container {
+  
+  background-color: var( --ifm-color-container-background);
+  border: 1px solid var(--ifm-color-container-border);
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.Category-Link {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.Title-Link {
+  color: black;
+  text-decoration: none; 
+}
+
+.Title-Link:hover {
+  color: #007bff; 
+}
+.Last-Values-Container {
+  background-color: var( --background);
+  border: 1px solid var(--ifm-color-container-border); 
+  border-radius: 20px; 
+  padding: 20px; 
+  margin: 10px auto; 
+  max-width: 800px; 
+}
+
+/* Styles for the Last-Values-Text element (h3) */
+.Last-Values-Text {
+    color: #007bff; 
+    margin-right: 80%;
+    
+    padding-bottom:10px ;
+    font-size: 20px; 
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+  
+/* Styles for the Values-Container element */
+.Values-Container {
+    margin: auto;
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+}
+.Link-Container{
+  width: 100%;
+}
+.Icons{
+  float: right;
+  line-height: 1px;
+  margin-right: 10px;
+}
+
+.Recomended-Container-Title{
+  color: #007bff;
+}
+.Recomended-Container-Recomendeds{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.Recomended-Container-Title-Container{
+  display: flex;
+  margin-right:60% ;
+  justify-content: right; 
+  align-items: center; 
+}
+
+.Recomendeds-Container {
+  display: grid; 
+  grid-template-columns: auto 1fr; 
+  grid-template-rows: auto 1fr; 
+  gap: 5px; 
+  margin: 20px; 
+  background-color: var(--background);
+  width: 300px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.svg-Icon {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: start;
+  justify-self: end;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.Recomendeds-Title {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  align-self: center;
+  margin: 0;
+  padding-right: 10px;
+  color: #007bff;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.Recomendeds-MainText {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  margin: 0;
+  padding-top: 10px;
+  color: var(--maintext);
+  font-size: 0.9em; 
+  line-height: 1.5;
+}
+

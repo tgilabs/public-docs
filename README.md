@@ -1,36 +1,41 @@
-# TeGriAi Wiki
+# ויקיפדיה הציבורית של TeGriAi
 
-Welcome to the TeGriAi Wiki, your comprehensive resource powered by [Docusaurus 2](https://docusaurus.io/) and hosted with the efficiency of [Cloudflare](https://pages.cloudflare.com/).
+האתר הזה בנוי באמצעות [Docusaurus](https://docusaurus.io/), מחולל אתרים סטטיים מודרני.
 
-## Getting Started
+### התקנה
 
-- Read the [Contributing Guidelines](./CONTRIBUTING.md) to learn how to contribute to the wiki.
-- Read the [Code of Conduct](./CODE_OF_CONDUCT.md) to learn about our community standards.
-- Read the [License](./LICENSE) to learn about the terms of use for this wiki.
-
-
-To explore our content and make the most of your experience, follow these steps:
-
-### Installation
-
-```bash
+```
 $ yarn
 ```
 
-This command installs the necessary dependencies to ensure smooth functionality.
+### פיתוח מקומי
 
-### Local Development
-
-```bash
+```
 $ yarn start
 ```
 
-Launch a local development server and access the content in your browser. Changes you make are immediately visible without requiring server restarts.
+הפקודה הזו מפעילה שרת פיתוח מקומי ופותחת חלון דפדפן. רוב השינויים משתקפים בזמן אמת מבלי שיהיה צורך להפעיל מחדש את השרת.
 
-### Building for Deployment
+### בנייה
 
-```bash
+```
 $ yarn build
 ```
 
-Generate static content within the `build` directory, ready to be deployed through a variety of static content hosting services.
+הפקודה הזו מייצרת תוכן סטטי לתוך ספריית `build` וניתן לשרת אותו באמצעות כל שירות אירוח תוכן סטטי.
+
+### פריסה
+
+באמצעות SSH:
+
+```
+$ USE_SSH=true yarn deploy
+```
+
+ללא שימוש ב-SSH:
+
+```
+$ GIT_USER=<שם המשתמש שלך ב-GitHub> yarn deploy
+```
+
+אם אתה משתמש ב-GitHub Pages לאירוח, הפקודה הזו היא דרך נוחה לבנות את האתר ולדחוף את השינויים לענף `gh-pages`.

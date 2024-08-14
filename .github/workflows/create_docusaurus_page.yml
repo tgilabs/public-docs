@@ -1,0 +1,80 @@
+name: Create Docusaurus Page from Issue
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  create-branch:
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'new-page'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: Production
+        token: ${{ secrets.GITHUB_TOKEN }}
+      
+    - name: Set Git User and Email
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+      
+    - name: Create and Push Branch
+      run: |
+        ISSUE_NUMBER=${{ github.event.issue.number }}
+        BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+        git checkout -b $BRANCH_NAME
+        git push -u origin $BRANCH_NAME
+
+  commit-file:
+    needs: create-branch
+    runs-on: ubuntu-latest
+    if: github.event.label.name == 'new-page'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+      with:
+        ref: Production
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    # Here, you may consider adding a step to sanitize or parse the issue body and title.
+
+    - name: Create Docusaurus File
+      run: |
+        ISSUE_NUMBER=${{ github.event.issue.number }}
+        TITLE="${{ github.event.issue.title }}"  # Enclosed in quotes to handle special characters
+        BODY="${{ github.event.issue.body }}"  # Enclosed in quotes to handle special characters
+        FILENAME="./docs/new-page-${ISSUE_NUMBER}.md"
+        
+        echo "---" > $FILENAME
+        echo "title: $TITLE" >> $FILENAME
+        echo "description: Created from Issue $ISSUE_NUMBER" >> $FILENAME
+        echo "sidebar_position: 1" >> $FILENAME
+        echo "---" >> $FILENAME
+        echo "$BODY" >> $FILENAME
+    
+    - name: Commit and Push Changes
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: Create new Docusaurus page from issue ${{ github.event.issue.number }}
+        branch: new-page-${{ github.event.issue.number }}
+    
+    - name: Create Pull Request
+      run: |
+        ISSUE_NUMBER=${{ github.event.issue.number }}
+        BRANCH_NAME="new-page-${ISSUE_NUMBER}"
+        
+        # Create PR using GitHub API
+        curl \
+          -X POST \
+          -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/${{ github.repository }}/pulls \
+          -d '{
+            "title": "New Docusaurus Page from Issue '${ISSUE_NUMBER}'",
+            "body": "This is an auto-generated PR for new Docusaurus page creation.",
+            "head": "'${BRANCH_NAME}'",
+            "base": "Production"
+          }'
+
