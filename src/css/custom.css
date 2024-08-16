@@ -55,6 +55,7 @@ h6 {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --maintext: #000000;
   --shadow-box-headerimage: rgba(0, 0, 0, 0.475);
+  --box-shadow-containers: rgba(0, 0, 0, 0.308);
 
 }
 
@@ -73,5 +74,7 @@ h6 {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --maintext: #ffffff;
   --shadow-box-headerimage: rgba(255, 255, 255, 0.306);
+  --box-shadow-containers: rgba(0, 110, 255, 0.253);
+
 
 }

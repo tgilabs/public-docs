@@ -19,7 +19,7 @@ export default function HomePageHeader(): JSX.Element {
     };
   }, []);
 
-  const parallaxFactor = 0.2;
+  const parallaxFactor = 0.4;
   const backgroundPositionY = scrollPosition * parallaxFactor;
 
   return (

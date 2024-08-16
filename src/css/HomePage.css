@@ -114,20 +114,24 @@
     margin-bottom: 10px;
   }
   
-/* Styles for the Values-Container element */
+
 .Values-Container {
-    margin: auto;
+  margin: auto;
   display: flex; 
   flex-wrap: wrap; 
   justify-content: space-between; 
 }
 .Link-Container{
+
   width: 100%;
+  align-items: center;
 }
 .Icons{
   float: right;
   line-height: 1px;
   margin-right: 10px;
+  margin-top: 5px; /* I apologise for my doings i have to go and i couldnt see it not in the middle. - Fravy / Ariel 16/8/2023 */
+  align-items: center;
 }
 
 .Recomended-Container-Title{
@@ -137,6 +141,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 .Recomended-Container-Title-Container{
   display: flex;
@@ -156,8 +161,12 @@
   padding: 15px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.35s ease;
 }
+.Recomendeds-Container:hover {
+  box-shadow: 0 0 20px var(--box-shadow-containers);
 
+}
 .svg-Icon {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
