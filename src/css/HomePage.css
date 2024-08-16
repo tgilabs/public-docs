@@ -49,8 +49,8 @@
   margin-bottom: 2vh;
 }
 
-.start-button:hover {
 
+.start-button:hover {
   background-color: var(--ifm-color-primary-blue);
 }
 .text1 {
