@@ -28,35 +28,62 @@
   align-items: center;
   justify-content: center;
   flex: 1; 
-  padding-bottom: 15vh;
+  padding-bottom: 3svh;
 }
 
 .start-button {
-
-  background-color: var(--ifm-color-primary);
-  color: white;
-  padding: 20px 100px;
-  font-weight: bold;
+  --border: 4px;
+  --slant: 0.7em;
+  --color: #0066ff;
+  
+  font-size: 35px;
+  padding: 0.4em 1.2em;
   border: none;
-  font-size: 20px;
   cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-bottom: 2vh;
+  font-weight: bold;
+  color: #ffff;
+  background: 
+     linear-gradient(to bottom left,var(--color)  50%,#0000 50.1%) top right,
+     linear-gradient(to top   right,var(--color)  50%,#0000 50.1%) bottom left;
+  background-size: calc(var(--slant) + 1.3*var(--border)) calc(var(--slant) + 1.3*var(--border));
+  background-repeat: no-repeat;
+  box-shadow:
+    0 0 0 200px inset var(--s,#0000),
+    0 0 0 var(--border) inset var(--color);
+  clip-path: 
+      polygon(0 0, calc(100% - var(--slant)) 0, 100% var(--slant),
+              100% 100%, var(--slant) 100%,0 calc(100% - var(--slant))
+             );
+  transition: color var(--t,0.3s), background-size 0.3s;
+  margin-bottom: 8svh;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.205);
 }
 
-
-.start-button:hover {
-  background-color: var(--ifm-color-primary-blue);
+.start-button:focus-visible {
+  outline-offset: calc(-1*var(--border));
+  outline: var(--border) solid #000c;
+  clip-path: none;
+  background-size: 0 0;
 }
+
+.start-button:hover,
+.start-button:active {
+  background-size: 100% 100%;
+
+  --t: 0.2s 0.1s;
+}
+
+.start-button:active {
+  --s: #0005;
+  transition: none;
+}
+
 .text1 {
   color: #fdfdfd;
   font-weight: bold;
   font-size: 5em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+
 }
 
 .text2 {
@@ -65,6 +92,8 @@
   color: #025ec0;
   font-size: 1.7em;
   font-weight: bold;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+
 }
 
 .Value-Container {
