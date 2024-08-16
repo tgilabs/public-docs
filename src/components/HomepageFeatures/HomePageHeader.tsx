@@ -3,6 +3,7 @@ import '@site/src/css/custom.css';
 import '@site/src/css/HomePage.css';
 
 export default function HomePageHeader(): JSX.Element {
+
   const [scrollPosition, setScrollPosition] = useState(0);
 
   
