@@ -67,26 +67,14 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'events',
-          label: 'אירועים',
-          position: 'left',
-        },
-        {
-          type: 'docSidebar',
           sidebarId: 'servers',
-          label: 'שרתים',
+          html: '<i class="fas fa-gamepad"></i> שרתי משחק',
           position: 'left',
         },
         {
           type: 'docSidebar',
           sidebarId: 'lab',
           html: '<i class="fas fa-flask"></i> המעבדה',
-          position: 'left',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'history',
-          label: 'היסטוריה',
           position: 'left',
         },
         {
