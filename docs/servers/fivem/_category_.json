@@ -1,0 +1,11 @@
+{
+  "position": 2,
+  "label": "🚗 פייבאם (GTA) רולפליי",
+  "collapsible": true,
+  "collapsed": false,
+  "className": "red",
+  "link": {
+    "type": "generated-index",
+    "title": "כל המידע על השרתים שלנו"
+  },
+}
