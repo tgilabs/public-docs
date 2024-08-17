@@ -73,6 +73,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'servers',
+          label: 'שרתים',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'lab',
           html: '<i class="fas fa-flask"></i> המעבדה',
           position: 'left',
