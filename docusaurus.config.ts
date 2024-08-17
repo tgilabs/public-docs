@@ -67,8 +67,8 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'events',
-          label: 'אירועים',
+          sidebarId: 'servers',
+          html: '<i class="fas fa-gamepad"></i> שרתי משחק',
           position: 'left',
         },
         {
@@ -81,12 +81,6 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'lab',
           html: '<i class="fas fa-flask"></i> המעבדה',
-          position: 'left',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'history',
-          label: 'היסטוריה',
           position: 'left',
         },
         {
