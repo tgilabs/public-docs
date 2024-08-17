@@ -49,12 +49,13 @@ h6 {
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-color-primary-blue: #0069d9;
   --ifm-color-container-background: #f8f9fa;
-  --ifm-color-container-border: #e9ecef;
+  --ifm-color-container-border: #d8d8d8;
   --background: #E3E3E3;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --maintext: #000000;
   --shadow-box-headerimage: rgba(0, 0, 0, 0.475);
+  --box-shadow-containers: rgba(0, 0, 0, 0.308);
 
 }
 
@@ -68,10 +69,12 @@ h6 {
   --ifm-color-primary-lightest: #4fddbf;
   --ifm-color-primary-blue: #0069d9;
   --ifm-color-container-background: #2d2d2d;
-  --background: #1C1E21; 
-  --ifm-color-container-border: #4a4a4a;
+  --background: #201f1f; 
+  --ifm-color-container-border: #242424;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
   --maintext: #ffffff;
   --shadow-box-headerimage: rgba(255, 255, 255, 0.306);
+  --box-shadow-containers: rgba(0, 110, 255, 0.253);
+
 
 }
