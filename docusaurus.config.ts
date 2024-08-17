@@ -62,7 +62,7 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'community',
-          label: 'קהילה',
+          html: '<i class="fas fa-users"></i> קהילה',
           position: 'left',
         },
         {
@@ -80,7 +80,7 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'lab',
-          label: 'המעבדה 🧪',
+          html: '<i class="fas fa-flask"></i> המעבדה',
           position: 'left',
         },
         {
@@ -92,22 +92,22 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'legal',
-          label: 'מדיניות',
+          html: '<i class="fas fa-gavel"></i> מדיניות',
           position: 'left',
         },
         {
           href: 'https://cloud.ims-network.net/he',
-          label: 'הענן שלנו',
+          html: '<i class="fas fa-cloud"></i> הענן שלנו',
           position: 'right',
         },
         {
           href: 'https://discord.gg/tgi',
-          label: 'דיסקורד',
+          html: '<i class="fa-brands fa-discord"></i> דיסקורד',
           position: 'right',
         },
         {
           href: 'https://workway.co.il',
-          label: 'WorkWay',
+          html: '<i class="fas fa-briefcase"></i> WorkWay',
           position: 'right',
         },
       ],
