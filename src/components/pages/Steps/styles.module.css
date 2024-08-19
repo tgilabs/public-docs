@@ -10,16 +10,16 @@
 .stepCard {
   border: 2px solid var(--border-color-secondary);
   border-radius: 15px;
-  padding: 15px; /* Increased padding by 5px */
-  width: 320px;  /* Increased width by 20px */
+  padding: 15px;
+  width: 320px;
   text-align: center;
-  margin: 5px;
+  margin: 10px 5px;
 }
 
 .stepNumber {
   font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .stepText {
