@@ -2,7 +2,7 @@
 
 .stepsContainer {
   display: flex;
-  justify-content: space-evenly; /* Changed from space-around to space-evenly */
+  justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 20px;
 }
@@ -10,10 +10,10 @@
 .stepCard {
   border: 2px solid var(--border-color-secondary);
   border-radius: 15px;
-  padding: 20px;
-  width: 200px;
+  padding: 15px; /* Increased padding by 5px */
+  width: 320px;  /* Increased width by 20px */
   text-align: center;
-  margin: 5px; /* Reduced margin */
+  margin: 5px;
 }
 
 .stepNumber {
