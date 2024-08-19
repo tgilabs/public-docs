@@ -60,6 +60,8 @@ h6 {
   --shadow-box-headerimage: rgba(0, 0, 0, 0.475);
   --box-shadow-containers: rgba(0, 0, 0, 0.308);
 
+  --border-color-secondary: black;
+
 }
 
 [data-theme='dark'] {
@@ -78,6 +80,7 @@ h6 {
   --maintext: #ffffff;
   --shadow-box-headerimage: rgba(255, 255, 255, 0.306);
   --box-shadow-containers: rgba(0, 110, 255, 0.253);
+  --border-color-secondary: white;
 
 
 }

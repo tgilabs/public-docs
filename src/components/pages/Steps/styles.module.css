@@ -1,0 +1,28 @@
+/* Steps.module.css */
+
+.stepsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.stepCard {
+  border: 2px solid var(--border-color-secondary);
+  border-radius: 15px;
+  padding: 15px;
+  width: 320px;
+  text-align: center;
+  margin: 10px 5px;
+}
+
+.stepNumber {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.stepText {
+  font-size: 1rem;
+  line-height: 1.5;
+}
