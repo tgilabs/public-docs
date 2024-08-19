@@ -1,29 +1,28 @@
 /* Steps.module.css */
 
 .stepsContainer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px;
-  }
-  
-  .stepCard {
-    border: 2px solid white;
-    border-radius: 15px;
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-    margin: 10px;
-  }
-  
-  .stepNumber {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
-  .stepText {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
+  display: flex;
+  justify-content: space-evenly; /* Changed from space-around to space-evenly */
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.stepCard {
+  border: 2px solid var(--border-color-secondary);
+  border-radius: 15px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  margin: 5px; /* Reduced margin */
+}
+
+.stepNumber {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.stepText {
+  font-size: 1rem;
+  line-height: 1.5;
+}
