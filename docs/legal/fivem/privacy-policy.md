@@ -11,8 +11,11 @@ description: מדיניות פרטיות בעבור שרתי ה-FiveM שלנו
 
 ## נתונים שאנו אוספים:
 
+בהתבסס על המידע שסיפקת, הנה טבלה המפרטת את הספקים הקשורים לשרת ה-FiveM שלך, כולל הסיבה לשימוש, מיקום אחסון המידע, והקישורים למדיניות הפרטיות שלהם:
+
 ### מידע משתמש:
-- **כתובת IP**: כתובת ה-IP של המשתמשים נאספת בעת התחברות לשרת.
+
+- **כתובת IP**: כתובת ה-IP של המשתמשים נאספת בעת התחברות לשרת ומאוחסנת בשרת מקומי בישראל.
 - **שם משתמש בפלטפורמת cfx.re**: שם המשתמש שלכם כפי שנרשם בפלטפורמת cfx.re.
 - **שם משתמש דיסקורד**: כולל שם משתמש, מזהה משתמש (Discord ID), ותאריך יצירת המשתמש.
 - **מזהים נוספים**: 
@@ -22,6 +25,24 @@ description: מדיניות פרטיות בעבור שרתי ה-FiveM שלנו
   - **מזהה Steam**: מזהה משתמש ב-Steam.
   - **מזהה Xbox (xbl ID)**: מזהה משתמש ב-Xbox.
   - **מזהה PlayStation**: מזהה משתמש ב-PlayStation.
+
+| שם הספק                | סיבה                        | מיקום אחסון המידע  | קישורים                                                                 |
+|-------------------------|-----------------------------|--------------------|--------------------------------------------------------------------------|
+| Microsoft               | ספק שירותי Xbox Live       | ארה"ב              | [https://privacy.microsoft.com/en-us/privacystatement](https://privacy.microsoft.com/en-us/privacystatement) |
+| Steam (Valve Corporation)| ספק שירותי Steam           | ארה"ב              | [https://store.steampowered.com/privacy_agreement/](https://store.steampowered.com/privacy_agreement/) |
+| Rockstar Games          | ספק שירותי Rockstar        | ארה"ב              | [https://www.rockstargames.com/privacy](https://www.rockstargames.com/privacy) |
+| PlayStation (Sony)      | ספק שירותי PlayStation     | ארה"ב              | [https://www.playstation.com/en-us/privacy-security-safety/](https://www.playstation.com/en-us/privacy-security-safety/) |
+| Discord                 | ספק שירותי תקשורת ואימות   | ארה"ב              | [https://discord.com/privacy](https://discord.com/privacy) |
+| cfx.re                  | ספק שירותי פלטפורמת FiveM  | ארה"ב              | [https://runtime.fivem.net/platform-license-agreement-12-sept-2023.pdf](https://runtime.fivem.net/platform-license-agreement-12-sept-2023.pdf) |
+| IMS - Cloud By IMS - Network | אחסון ואיסוף כתובות IP     | ישראל              | [https://legal.ims-network.net/privacy/general-privacy-policy/](https://legal.ims-network.net/privacy/general-privacy-policy/) |
+
+
+### מדיניות פלטפורמת FiveM:
+
+בשרת שלנו, אנו עוקבים אחרי מדיניות ותנאי השימוש של פלטפורמת FiveM, שהיא בבעלות Rockstar. ניתן לעיין במסמך התנאים כאן: [FiveM Platform License Agreement](https://runtime.fivem.net/platform-license-agreement-12-sept-2023.pdf).
+
+
+
 
 ### מזהי חומרה (Hardware IDs):
 - **HWID**: מזהים ייחודיים של רכיבי חומרה במחשב שלכם. מזהים אלו משמשים לאימות והגנה מפני רמאויות או גישה לא מורשית.
