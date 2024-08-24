@@ -7,6 +7,9 @@
 
  @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap');
  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap');
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+ @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css');
+
 
 /* Use Rubik for elements with the class "title" */
 .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -56,6 +59,8 @@ h6 {
   --maintext: #000000;
   --shadow-box-headerimage: rgba(0, 0, 0, 0.475);
   --box-shadow-containers: rgba(0, 0, 0, 0.308);
+  --border-color-secondary: black;
+
 
 }
 
@@ -75,6 +80,7 @@ h6 {
   --maintext: #ffffff;
   --shadow-box-headerimage: rgba(255, 255, 255, 0.306);
   --box-shadow-containers: rgba(0, 110, 255, 0.253);
+  --border-color-secondary: white;
 
 
 }

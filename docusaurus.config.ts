@@ -62,46 +62,50 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'community',
-          label: 'קהילה',
+          html: '<i class="fas fa-users"></i> קהילה',
           position: 'left',
         },
         {
           type: 'docSidebar',
-          sidebarId: 'events',
-          label: 'אירועים',
+          sidebarId: 'servers',
+          html: '<i class="fas fa-gamepad"></i> שרתי משחק',
           position: 'left',
         },
         {
           type: 'docSidebar',
           sidebarId: 'lab',
-          label: 'המעבדה 🧪',
-          position: 'left',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'history',
-          label: 'היסטוריה',
+          html: '<i class="fas fa-flask"></i> המעבדה',
           position: 'left',
         },
         {
           type: 'docSidebar',
           sidebarId: 'legal',
-          label: 'מדיניות',
+          html: '<i class="fas fa-gavel"></i> מדיניות',
           position: 'left',
         },
         {
-          href: 'https://cloud.ims-network.net/he',
-          label: 'הענן שלנו',
+          type: 'dropdown',
+          html: '<i class="fas fa-plus"></i> משאבים נוספים',
           position: 'right',
+          items: [
+            {
+              href: 'https://www.tegriai.com',
+              html: '<i class="fas fa-home"></i> אתר טגי',
+            },
+            {
+              href: 'https://workway.co.il',
+              html: '<i class="fas fa-briefcase"></i> WorkWay',
+            },
+            {
+              href: 'https://cloud.ims-network.net/he',
+              html: '<i class="fas fa-cloud"></i> הענן שלנו',
+            },
+
+          ],
         },
         {
           href: 'https://discord.gg/tgi',
-          label: 'דיסקורד',
-          position: 'right',
-        },
-        {
-          href: 'https://workway.co.il',
-          label: 'WorkWay',
+          html: '<i class="fa-brands fa-discord"></i>',
           position: 'right',
         },
       ],
