@@ -3,7 +3,7 @@
 
 
 .Header-Container {
-  width: 100%;
+  width: 100vw;
   height: 89vh;
   display: flex;
   justify-content: center;
@@ -14,12 +14,9 @@
   background-position: center;
   margin: 0;
   padding: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  transition: transform 0.1s ease-out; 
 }
 
 .text-wrapper {
