@@ -84,7 +84,6 @@ const config: Config = {
               sidebarId: 'fivem',
               html: '<i class="fas fa-car"></i> פייבאם',
             },
-    
           ],
         },
         {
