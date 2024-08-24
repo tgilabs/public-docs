@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-title: הצהרת הנגישות ♿️
+title: הצהרת הנגישות
 description: הצהרת הנגישות שלנו
 ---
 
