@@ -11,8 +11,8 @@ type recomended ={
 }
 const recomendedlist:recomended[] =[
   {
-    title:"המעבדה של TGI",
-    mainText:"טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט טסקט טקסט ",
+    title:"הקהילה",
+    mainText:"למדו כל מה שאתם צריכים לדעת על קהילת TGI",
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     link:"tgiLabs"
   },
