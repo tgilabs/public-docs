@@ -52,6 +52,11 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/background.jpeg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'הויקיפדיה של TeGriAi',
       logo: {
@@ -66,10 +71,20 @@ const config: Config = {
           position: 'left',
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'servers',
+          type: 'dropdown',
           html: '<i class="fas fa-gamepad"></i> שרתי משחק',
           position: 'left',
+          items: [
+            {
+              href: '/servers/rules',
+              html: '<i class="fas fa-balance-scale"></i> חוקי הקהילה',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'fivem',
+              html: '<i class="fas fa-car"></i> פייבאם',
+            },
+          ],
         },
         {
           type: 'docSidebar',
