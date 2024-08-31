@@ -13,8 +13,7 @@ export default function Home(): JSX.Element {
     description="כל המדריכים והמידע במקום אחד, בואו ללמוד על הקהילה שלנו">
       <HomePageHeader  />
       <main >
-        <HomepageLastValues />
-        <HomePageRecomended />
+
       </main>
     </Layout>
   );
