@@ -3,7 +3,7 @@
 
 
 .Header-Container {
-  width: 100%;
+  width: 100vw;
   height: 89vh;
   display: flex;
   justify-content: center;
@@ -14,12 +14,9 @@
   background-position: center;
   margin: 0;
   padding: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  transition: transform 0.1s ease-out; 
 }
 
 .text-wrapper {
@@ -203,4 +200,205 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+
+.Recomended-Container-Recomendeds {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (max-width: 1080px) {
+  .Header-Container {
+    height: 89vh;
+    width: 100vw;
+  }
+  .Recomended-Container-Recomendeds {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
+  }
+
+  .Recomendeds-Container {
+    margin: 0 auto;
+  }
+  .Recomended-Container-Title-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Recomended-Container-Title,
+  .Recomended-Container-Title2 {
+    text-align: center;
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin-bottom: 2vh;
+  }
+
+  .down {
+    margin-bottom: 5vh;
+  }
+
+  .Recomended-Container-Title {
+    font-size: 2rem;
+  }
+  .Recomendeds-Container {
+    width: 75%;
+    max-width: 100%;
+  }
+  .text1 {
+    font-size: 3em;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .text2 {
+    font-size: 1.6em;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+}
+@media (max-width: 780px) {
+  .Header-Container {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .text1 {
+    font-size: 3em;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .text2 {
+    font-size: 1.6em;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .text-wrapper {
+    padding-bottom: 2svh;
+  }
+
+  .Recomended-Container-Recomendeds {
+    display: grid;
+    grid-template-columns: 1fr; /* One column */
+    gap: 20px;
+  }
+
+  .Recomendeds-Container {
+    margin: 0 auto;
+  }
+
+  .Recomended-Container {
+    text-align: center;
+  }
+
+  .Recomendeds-Container {
+    margin: 0 auto;
+  }
+
+  .Recomendeds-Title {
+    text-align: center;
+  }
+
+  .Recomendeds-MainText {
+    text-align: center;
+  }
+
+  .Recomended-Container-Title-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Recomended-Container-Title,
+  .Recomended-Container-Title2 {
+    text-align: center;
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  .down {
+    margin-bottom: 3vh;
+  }
+
+  .Recomended-Container-Title {
+    font-size: 1.8rem;
+  }
+  .Last-Values-Container {
+    background-color: var( --background);
+    border: 2px solid var(--ifm-color-container-border); 
+    border-radius: 20px; 
+    padding: 20px; 
+    margin: 10px auto; 
+    max-width: 500px; 
+  }
+  .Last-Values-Text {
+    color: #007bff; 
+    margin-right: 0;
+    padding-bottom:10px ;
+    font-size: 20px; 
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+  .Recomendeds-Container {
+    width: 55%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Last-Values-Container {
+    background-color: var( --background);
+    border: 2px solid var(--ifm-color-container-border); 
+    border-radius: 20px; 
+    padding: 20px; 
+    margin: 10px auto; 
+    max-width: 370px; 
+  }
+  .Last-Values-Text {
+    color: #007bff; 
+    margin-right: 0;
+    padding-bottom:10px ;
+    font-size: 20px; 
+    text-align: center; 
+    margin-bottom: 10px;
+  }
+  .Recomendeds-Container {
+    width: 80%;
+    max-width: 100%;
+  }
+  .text1 {
+    font-size: 2.3em;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .text2 {
+    font-size: 1.4em;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+  
 }
