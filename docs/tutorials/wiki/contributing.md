@@ -1,7 +1,6 @@
 ---
 title: הוספת תוכן לוויקי
 sidebar_position: 1
-slug: /tutorials/wiki/contributing
 ---
 
 # מידע כללי
@@ -22,6 +21,3 @@ slug: /tutorials/wiki/contributing
 - הבנה בסיסית של Markdown
   
 
-import DocCardList from '@theme/DocCardList';
-
-<DocCardList />
