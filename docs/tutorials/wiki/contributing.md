@@ -17,7 +17,7 @@ sidebar_position: 1
 ## איך מוסיפים תוכן
 
 לפני שנתחיל להוסיף תוכן חשוב להכין כמה דברים
-- משתמש GitHub
+- [משתמש GitHub](/tutorials/wiki/github/)
 - הבנה בסיסית של Markdown
   
 
