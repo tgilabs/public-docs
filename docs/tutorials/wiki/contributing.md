@@ -18,6 +18,22 @@ sidebar_position: 1
 
 לפני שנתחיל להוסיף תוכן חשוב להכין כמה דברים
 - [משתמש GitHub](/tutorials/wiki/github/)
-- הבנה בסיסית של Markdown
+- [הבנה בסיסית של Markdown](markdown)
+- [הכרות אם Docusaurus](/tutorials/wiki/docusaurus/)
   
+
+1. Fork the repo
+חייב ליצור העתק של המאגר כדי להוסיף תוכן חדש
+https://github.com/tgilabs/public-docs/fork
+
+2. הורידו את המאגר למחשב שלכם
+```bash
+git clone https:://github.com/your-username/public-docs
+```
+3. תפתחו את הקובץ שאתם רוצים לערוך עם כלי עריכה כמו VSCode
+```bash
+cd public-docs
+code . 
+```
+התחילו לערוך קבצים ולהוסיף תוכן חדש בהתאם למה שאתרם רוצים
 
