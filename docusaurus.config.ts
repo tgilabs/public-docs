@@ -87,6 +87,27 @@ const config: Config = {
           ],
         },
         {
+          type: 'dropdown',
+          html: '<i class="fas fa-book-open"></i> מדריכים', 
+          items: [
+            {
+              type: 'docSidebar',
+              sidebarId: 'wiki',
+              html: '<i class="fas fa-university"></i> הויקיפדיה שלנו', 
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'workway',
+              html: '<i class="fas fa-tasks"></i> המקום לכל משימה',
+            },
+            {
+              type: 'docSidebar',
+              sidebarId: 'tg1',
+              html: '<i class="fas fa-gamepad"></i> פלטפורמת הטורנירים', 
+            },
+          ],
+        },
+        {
           type: 'docSidebar',
           sidebarId: 'lab',
           html: '<i class="fas fa-flask"></i> המעבדה',
