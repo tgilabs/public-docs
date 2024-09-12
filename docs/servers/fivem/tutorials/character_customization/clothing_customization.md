@@ -9,7 +9,9 @@ title: עיצוב הבגדים👕
 ## הבגדים תמיד ניתנים לשינוי
 ניתן לשנות את כל הבגדים בחנות בגדים בכל זמן נתון שתרצו
 
-(תמונה של חנות הבגדים במפה)
+סימון של חנות הבגדים במפה
+
+![כפתור הורדת האפליקצייה](../../img/charactercustomization/char54.png)
 
 ## הסבר על היררכיית החולצות
 
