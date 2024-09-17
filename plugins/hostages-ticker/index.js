@@ -8,7 +8,7 @@ module.exports = function () {
               tagName: 'div',
               attributes: {
                 id: 'bthn',
-                lang: 'en',
+                lang: 'he',
               },
             },
             {
