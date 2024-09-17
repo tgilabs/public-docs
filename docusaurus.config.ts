@@ -49,6 +49,7 @@ const config: Config = {
     ],
   ],
 
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/background.jpeg',
@@ -159,6 +160,34 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
+      scripts: [
+        // Existing nagishli.js script
+        {
+          src: '@site/src/plugins/nagishli.js',
+          charset: 'utf-8',
+          defer: true,
+        },
+        {
+          type: 'text/javascript',
+          innerHTML: `
+            nl_pos = "bl";
+            nl_compact = "1";
+            nl_accordion = "1";
+            nl_dir = "@site/src/plugins/nagishli-files/";
+          `,
+        },
+        // Bring Them Home Now script
+        {
+          src: 'https://bringthemhomenow.net/1.1.0/hostages-ticker.js',
+          integrity: 'sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne',
+          crossorigin: 'anonymous',
+          defer: true,
+        },
+      ],  
+    
+    
+
   } satisfies Preset.ThemeConfig,
 };
 
