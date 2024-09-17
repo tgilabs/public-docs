@@ -51,7 +51,7 @@ const config: Config = {
 
 
   plugins: [
-    // Register your custom plugin
+    require.resolve('./plugins/accessibility/index.js'),
     require.resolve('./plugins/hostages-ticker/index.js'),
   ],
 
