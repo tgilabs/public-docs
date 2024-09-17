@@ -160,29 +160,31 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-
-    postBodyTags: [
-      {
-        tagName: 'script',
-        innerHTML: `
-          nl_pos = "bl";
-          nl_compact = "1";
-          nl_accordion = "1";
-          nl_dir = "@stie/src/plugins/nagishli-files/";
-        `,
-      },
-
-      {
-        tagName: 'script',
-        attributes: {
-          src: 'src/plugins/nagishli.js',
-          charset: 'utf-8',
-          defer: true,
+    
+    injectHtmlTags: {
+      postBodyTags: [
+        {
+          tagName: 'div',
+          attributes: {
+            id: 'bthn',
+            lang: 'en',
+          },
         },
-      },
-    ], 
-    
-    
+        {
+          tagName: 'script',
+          innerHTML: `
+            (function () {
+              var script = document.createElement("script");
+              script.type = "text/javascript";
+              script.src = "https://bringthemhomenow.net/1.1.0/hostages-ticker.js";
+              script.setAttribute("integrity", "sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne");
+              script.setAttribute("crossorigin", "anonymous");
+              document.getElementsByTagName("head")[0].appendChild(script);
+            })();
+          `,
+        },
+      ],
+    },
 
   } satisfies Preset.ThemeConfig,
 };
