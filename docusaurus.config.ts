@@ -161,30 +161,26 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
 
-      scripts: [
-        // Existing nagishli.js script
-        {
-          src: '@site/src/plugins/nagishli.js',
+    postBodyTags: [
+      {
+        tagName: 'script',
+        innerHTML: `
+          nl_pos = "bl";
+          nl_compact = "1";
+          nl_accordion = "1";
+          nl_dir = "@stie/src/plugins/nagishli-files/";
+        `,
+      },
+
+      {
+        tagName: 'script',
+        attributes: {
+          src: 'src/plugins/nagishli.js',
           charset: 'utf-8',
           defer: true,
         },
-        {
-          type: 'text/javascript',
-          innerHTML: `
-            nl_pos = "bl";
-            nl_compact = "1";
-            nl_accordion = "1";
-            nl_dir = "@site/src/plugins/nagishli-files/";
-          `,
-        },
-        // Bring Them Home Now script
-        {
-          src: 'https://bringthemhomenow.net/1.1.0/hostages-ticker.js',
-          integrity: 'sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne',
-          crossorigin: 'anonymous',
-          defer: true,
-        },
-      ],  
+      },
+    ], 
     
     
 
