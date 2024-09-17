@@ -10,13 +10,13 @@ module.exports = function () {
                 nl_pos = "bl";
                 nl_compact = "1";
                 nl_accordion = "1";
-                nl_dir = "/plugins/nagishli-files/";
+                nl_dir = "@site/plugins/nagishli-files/";
               `,
             },
             {
               tagName: 'script',
               attributes: {
-                src: '/plugins/nagishli.js',
+                src: '@site/plugins/nagishli.js',
                 charset: 'utf-8',
                 defer: true,
               },
