@@ -50,6 +50,12 @@ const config: Config = {
   ],
 
 
+  plugins: [
+    // Register your custom plugin
+    require.resolve('./plugins/hostages-ticker/index.js'),
+  ],
+
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/background.jpeg',
@@ -159,31 +165,6 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-    },
-    
-    injectHtmlTags: {
-      postBodyTags: [
-        {
-          tagName: 'div',
-          attributes: {
-            id: 'bthn',
-            lang: 'en',
-          },
-        },
-        {
-          tagName: 'script',
-          innerHTML: `
-            (function () {
-              var script = document.createElement("script");
-              script.type = "text/javascript";
-              script.src = "https://bringthemhomenow.net/1.1.0/hostages-ticker.js";
-              script.setAttribute("integrity", "sha384-DHuakkmS4DXvIW79Ttuqjvl95NepBRwfVGx6bmqBJVVwqsosq8hROrydHItKdsne");
-              script.setAttribute("crossorigin", "anonymous");
-              document.getElementsByTagName("head")[0].appendChild(script);
-            })();
-          `,
-        },
-      ],
     },
 
   } satisfies Preset.ThemeConfig,
