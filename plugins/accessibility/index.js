@@ -1,6 +1,6 @@
 module.exports = function () {
     return {
-      name: 'accessibility-plugin',
+      name: 'accessibility',
       injectHtmlTags() {
         return {
           postBodyTags: [
@@ -26,4 +26,3 @@ module.exports = function () {
       },
     };
   };
-  
