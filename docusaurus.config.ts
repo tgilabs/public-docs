@@ -54,7 +54,6 @@ const config: Config = {
     require.resolve('./plugins/hostages-ticker/index.js'),
   ],
 
-
   themeConfig: {
     // Replace with your project's social card
     image: 'img/background.jpeg',
