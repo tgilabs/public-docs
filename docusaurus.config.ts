@@ -51,16 +51,7 @@ const config: Config = {
 
 
   plugins: [
-    require.resolve('./plugins/accessibility/index.js'),
     require.resolve('./plugins/hostages-ticker/index.js'),
-  ],
-
-  scripts: [
-    {
-      src: 'https://wiki.tegriai.com/plugins/nagishli.js?v=3',
-      charset: 'utf-8',
-      defer: true,  // This ensures it runs after the page is parsed
-    },
   ],
 
 
