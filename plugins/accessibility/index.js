@@ -1,28 +1,20 @@
-module.exports = function () {
-    return {
-      name: 'accessibility',
-      injectHtmlTags() {
-        return {
-          postBodyTags: [
-            {
-              tagName: 'script',
-              innerHTML: `
-                nl_pos = "bl";
-                nl_compact = "1";
-                nl_accordion = "1";
-                nl_dir = "./nagishli-files";
-              `,
+// src/docusaurus-plugin/index.js
+module.exports = function (context, options) {
+  return {
+    name: 'nagishli-plugin',
+    injectHtmlTags() {
+      return {
+        postBodyTags: [
+          {
+            tagName: 'script',
+            attributes: {
+              charset: 'utf-8',
+              src: '/plugins/accessibility/nagishli_beta.js',
+              defer: true,
             },
-            {
-              tagName: 'script',
-              attributes: {
-                src: './nagishli.js',
-                charset: 'utf-8',
-                defer: true,
-              },
-            },
-          ],
-        };
-      },
-    };
+          },
+        ],
+      };
+    },
   };
+};
