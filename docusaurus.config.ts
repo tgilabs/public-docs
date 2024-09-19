@@ -55,6 +55,14 @@ const config: Config = {
     require.resolve('./plugins/hostages-ticker/index.js'),
   ],
 
+  scripts: [
+    {
+      src: 'https://wiki.tegriai.com/plugins/nagishli.js?v=3',
+      charset: 'utf-8',
+      defer: true,  // This ensures it runs after the page is parsed
+    },
+  ],
+
 
   themeConfig: {
     // Replace with your project's social card
