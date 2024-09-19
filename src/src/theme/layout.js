@@ -6,7 +6,7 @@ export default function CustomLayout(props) {
   useEffect(() => {
     // Create the script element
     const script = document.createElement('script');
-    script.src = '/plugins/accessibility/nagishli.js?v=3';
+    script.src = '/static/accessibility/nagishli.js?v=3';
     script.charset = 'utf-8';
     script.defer = true;
 
