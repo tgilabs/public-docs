@@ -49,6 +49,12 @@ const config: Config = {
     ],
   ],
 
+
+  plugins: [
+    require.resolve('./plugins/hostages-ticker/index.js'),
+    require.resolve('./plugins/accessibility/index.js'),
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/background.jpeg',
@@ -159,6 +165,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
   } satisfies Preset.ThemeConfig,
 };
 
