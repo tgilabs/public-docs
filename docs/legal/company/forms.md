@@ -39,3 +39,12 @@ TeGriAi אינה מעבירה מידע לצדדים שלישיים לצורך ת
 TeGriAi שומרת לעצמה את הזכות לעדכן את מדיניות הפרטיות מעת לעת. שינויים במדיניות זו יפורסמו באתר, ואנו ממליצים לעיין במדיניות זו באופן קבוע.
 
 ### 7. **צור קשר**
+
+
+<div style={{ position: 'relative', height: '60dvh', overflow: 'auto' }}> 
+  <iframe 
+    src="https://forms.tegriai.com/s/cm1d4xw4f00f3tu3nxte4f4nk?embed=true" 
+    frameBorder="0" 
+    style={{ position: 'absolute', left: 0, top: 0, width: '100%', height: '60%', border: 0 }}>
+  </iframe>
+</div>
