@@ -29,6 +29,19 @@ const config: Config = {
     locales: ['he'],
   },
 
+  scripts: [
+    {
+      src: "https://forms.tegriai.com/api/packages/website",
+      async: true,
+      onload: `setTimeout(function() {
+        window.formbricks.init({
+          environmentId: "cm1d4un8q00eztu3ng6nkqe8r",
+          apiHost: "https://forms.tegriai.com"
+        });
+      }, 500);`
+    }
+  ],
+
   presets: [
     [
       'classic',
@@ -47,6 +60,12 @@ const config: Config = {
         },
       } satisfies Preset.Options,
     ],
+  ],
+
+
+  plugins: [
+    require.resolve('./plugins/hostages-ticker/index.js'),
+    require.resolve('./plugins/accessibility/index.js'),
   ],
 
   themeConfig: {
@@ -159,6 +178,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+
   } satisfies Preset.ThemeConfig,
 };
 
